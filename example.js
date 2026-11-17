@@ -54,4 +54,10 @@ showUser({name:'muklis',age:22})
 
 // arrow function paremater destructuring 
 const greet = ({name,age}) => console.log(`${name} is ${age} years old`);
-greet({name:'majid',age:20})
+
+
+// Spread operator copy an array
+const number = [1,2,3,];
+const copiedNumbers = [...number]
+console.log(copiedNumbers)
+
