@@ -32,4 +32,31 @@ const user1 = createUserList('Muklis pt','muklismuhammed867@gmail.com')
 const user2 = createUserList('majid','majid@gmail.com')
 
 console.log(user1)
+
 console.log(user2)
+//message arrow function can recive vane and return value 
+
+const message = (name,city)=> `welcom, ${name} you from ${city}`
+console.log(message('muklis','Randathani'))
+
+//calculate product price and discount example
+const product = (mrp,price,quntity) => {
+    const discountAmount = mrp-price;
+    const discountPercentage = (discountAmount/mrp)*100 ;
+    return `Total price is ${price*quntity} and offer percentage %${discountPercentage} and dicount amount ${discountAmount}`;
+};
+console.log(product(150,130,3));
+
+const calculateDiscount = (mrp,sellingPrice) =>{
+    const discountAmount = mrp - sellingPrice;
+    const discountPercentage = (discountAmount/mrp)*100;
+
+    return {
+        mrp,
+        sellingPrice,
+        discountAmount,
+        discountPercentage
+    };
+};
+
+console.log(calculateDiscount(1000,750))
