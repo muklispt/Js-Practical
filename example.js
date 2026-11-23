@@ -33,3 +33,23 @@ const totalAmount = cart.reduce((total,item) =>{
     return total + item.price * item.quantity;
 },0)
 console.log(totalAmount)
+
+// combining array methods 
+// example show name of availble products below 30,000
+const products = [
+    {id:1,name:'Phone',price:20000,stock:5},
+    {id:2,name:'Laptop',price:50000,stock:2},
+    {id:3,name:'Watch',price:5000,stock:0},
+    {id:4,name:'Tablet',price:25000,stock:4},
+]
+const result = products
+.filter(product=> product.stock>0)
+.filter(product=>product.price<30000)
+.map(product=>product.name)
+
+console.log(result)
+
+//** Understand the order:
+// 1. First filter(): remove products with no stock.
+// 2. second filter(): keep products below 30,000. 
+// 3. map(): transform the remaining product objects into names.*/
