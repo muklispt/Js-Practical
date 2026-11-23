@@ -29,3 +29,9 @@ import getTotalProducts from "./deful.js";
 console.log(products)
 console.log(getProductName())
 console.log(getTotalProducts())
+
+//** Remember:
+// Defult import: no curly braces
+// Nmaed imports: curly braces.
+// Default import can have any local name.
+// A file can have multiple named exports, but only one default export. */
